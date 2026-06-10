@@ -216,3 +216,12 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Caches e ambientes
+__pycache__/
+.mypy_cache/
+.pytest_cache/
+*.py[cod]
+
+# VS Code
+.vscode/

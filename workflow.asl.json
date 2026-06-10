@@ -1,0 +1,21 @@
+{
+    "Comment": "Workflow de processamento de arquivo CSV (versão local simulada)",
+    "StartAt": "LerArquivo",
+    "States": {
+        "LerArquivo": {
+            "Type": "Task",
+            "Resource": "arn:aws:lambda:us-east-1:123456789012:function:LerArquivo",
+            "Next": "Analisar"
+        },
+        "Analisar": {
+            "Type": "Task",
+            "Resource": "arn:aws:lambda:us-east-1:123456789012:function:Analisar",
+            "Next": "GravarResultado"
+        },
+        "GravarResultado": {
+            "Type": "Task",
+            "Resource": "arn:aws:lambda:us-east-1:123456789012:function:GravarResultado",
+            "End": true
+        }
+    }
+}
